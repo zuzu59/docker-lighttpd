@@ -1,11 +1,14 @@
-#!/bin/bash
-#Petit script pour démarrer tout le binz
-#zf190430.1053
+#!/bin/bash 
+#Petit script pour démarrer tout le binz zf190430.1121
 
 #pour installer Docker et Docker compose sur une machine Ubuntu c'est ici:
 #https://github.com/zuzu59/docker_demo
 
 #source: https://hub.docker.com/r/sebp/lighttpd
+
+
+mkdir log
+sudo chown 100.101 log
 
 
 #docker-compose up
@@ -21,8 +24,8 @@ docker-compose logs -f
 pour voir qu'est-ce qui tourne:
 docker-compose ps
 
-pour 'entrer' dans un 'service':
-docker-compose exec nom_service /bin/bash
+pour 'entrer' dans le container:
+docker-compose exec lighttpd /bin/sh
 
 pour arrêter:
 docker-compose stop

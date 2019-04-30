@@ -1,4 +1,4 @@
-#zf190430.1052
+#zf190430.1122
 
 version: "3"
 
@@ -8,6 +8,7 @@ services:
       image: sebp/lighttpd
       volumes:
         - $PWD/www:/var/www/localhost/htdocs
+        - $PWD/log:/var/log/lighttpd
 #        - $PWD/etc/lighttpd:/etc/lighttpd
       ports:
         - "8081:80"
