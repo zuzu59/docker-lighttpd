@@ -1,4 +1,4 @@
-#zf190430.1122
+#zf190430.1705
 
 version: "3"
 
@@ -10,8 +10,13 @@ services:
         - $PWD/www:/var/www/localhost/htdocs
         - $PWD/log:/var/log/lighttpd
 #        - $PWD/etc/lighttpd:/etc/lighttpd
-      ports:
-        - "8081:80"
+#      ports:
+#        - "8081:80"
+      networks:
+        - traefik
+networks:
+  traefik:
+    external: true
     
 
 

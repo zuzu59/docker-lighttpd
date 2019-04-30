@@ -1,5 +1,5 @@
 #!/bin/bash 
-#Petit script pour démarrer tout le binz zf190430.1121
+#Petit script pour démarrer tout le binz zf190430.1700
 
 #pour installer Docker et Docker compose sur une machine Ubuntu c'est ici:
 #https://github.com/zuzu59/docker_demo
@@ -10,7 +10,7 @@
 mkdir log
 sudo chown 100.101 log
 
-
+docker network create traefik
 #docker-compose up
 docker-compose up -d
 docker-compose logs -f
